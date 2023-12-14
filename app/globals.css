@@ -2,26 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'SUIT Variable';
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+  font-family: 'SUIT Variable';
+  font-weight: 100 900;
+  src: url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.woff2') format('woff2-variations');
+}
+
+@layer base {
+  html {
+    --color-background: #f5f5f5;
+    --color-bright: #ffffff;
+    --color-dark: #e1e1e1;
+    --color-paragraph: #000000;
+  }
+
+  html.dark {
+    --color-background: #1c1c1c;
+    --color-bright: #242424;
+    --color-dark: #141414;
+    --color-paragraph: #ffffff;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .tr {
+    @apply flex h-8 items-center;
+  }
+
+  .th {
+    @apply w-16 ml-2 md:ml-0 font-bold;
+  }
+
+  .td {}
 }
