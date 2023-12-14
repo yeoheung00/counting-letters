@@ -22,11 +22,11 @@ export default function Home() {
         <div className="flex flex-wrap">
           <div className="basis-[50%] md:basis-[100%]">
             <div className="tr">
-              <h3 className="th">공백제외</h3>
+              <h3 className="th">공백 제외</h3>
               <p className="td">{text.replaceAll("\n", "").replaceAll(" ", "").length}</p>
             </div>
             <div className="tr">
-              <h3 className="th">공백포함</h3>
+              <h3 className="th">공백 포함</h3>
               <p className="td">{text.length}</p>
             </div>
           </div>
